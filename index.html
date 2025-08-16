@@ -1,1 +1,151 @@
-<h1>VL</h1>
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tên Dự Án | Trang chủ</title>
+  <meta name="description" content="Mô tả ngắn gọn về dự án của bạn." />
+  <meta name="theme-color" content="#ff6ea9" />
+  <!-- Open Graph -->
+  <meta property="og:title" content="Tên Dự Án" />
+  <meta property="og:description" content="Mô tả ngắn gọn về dự án của bạn." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://your-domain-or-github-pages" />
+  <meta property="og:image" content="https://your-domain/og-image.png" />
+
+  <style>
+    :root{
+      --bg:#fff; --fg:#1e1e1e; --muted:#6b7280;
+      --brand:#ff6ea9; --brand-2:#7c3aed; --card:#f8fafc; --line:#e5e7eb;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0; font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial,sans-serif;
+      background:var(--bg); color:var(--fg); line-height:1.6;
+      -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+    }
+    a{color:var(--brand); text-decoration:none}
+    a:hover{text-decoration:underline}
+    .container{max-width:1100px; margin:0 auto; padding:0 20px}
+
+    /* Header */
+    header{
+      position:sticky; top:0; z-index:10; background:var(--bg);
+      border-bottom:1px solid var(--line); backdrop-filter:saturate(180%) blur(6px);
+    }
+    .nav{display:flex; align-items:center; justify-content:space-between; padding:14px 0}
+    .logo{font-weight:800; letter-spacing:.2px}
+    .badge{display:inline-block; margin-left:8px; padding:2px 8px; border-radius:999px; background:var(--card); border:1px solid var(--line); font-size:12px; color:var(--muted)}
+    .nav a{margin-left:16px; font-weight:600; color:inherit}
+    .btn{
+      display:inline-flex; align-items:center; gap:8px; border:1px solid var(--line); padding:10px 14px;
+      border-radius:10px; background:var(--bg); cursor:pointer; font-weight:600;
+    }
+    .btn.primary{background:linear-gradient(90deg,var(--brand),var(--brand-2)); color:#fff; border:none}
+    .btn:hover{transform:translateY(-1px)}
+    .right{display:flex; align-items:center; gap:10px}
+
+    /* Hero */
+    .hero{padding:72px 0 36px}
+    .hero h1{font-size:clamp(28px,5vw,44px); line-height:1.15; margin:0 0 14px}
+    .hero p{color:var(--muted); font-size:clamp(15px,2.5vw,18px); margin:0 0 24px}
+    .hero .cta{display:flex; gap:10px; flex-wrap:wrap}
+    .card{
+      background:var(--card); border:1px solid var(--line); border-radius:14px; padding:18px; margin-top:28px
+    }
+
+    /* Features */
+    .grid{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:16px}
+    .feature{border:1px solid var(--line); border-radius:12px; padding:18px; background:#fff}
+    .feature h3{margin:0 0 8px; font-size:18px}
+    .feature p{margin:0; color:var(--muted)}
+    @media (max-width:860px){.grid{grid-template-columns:1fr 1fr}}
+    @media (max-width:560px){.grid{grid-template-columns:1fr}}
+
+    /* Footer */
+    footer{margin-top:48px; border-top:1px solid var(--line); padding:18px 0; color:var(--muted); font-size:14px}
+
+    /* Dark mode */
+    .dark{--bg:#0b0c0f; --fg:#e5e7eb; --muted:#9aa4b2; --card:#0f1217; --line:#1f2937}
+    .dark .feature{background:#0d0f14}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="logo">Tên Dự Án <span class="badge">v1.0.0</span></div>
+      <nav class="right">
+        <a href="#tinh-nang">Tính năng</a>
+        <a href="#bat-dau">Bắt đầu</a>
+        <button id="mode" class="btn" aria-label="Chuyển chế độ nền">🌓</button>
+        <a class="btn primary" href="https://github.com/username/reponame" target="_blank" rel="noopener">⭐ Star trên GitHub</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h1>Xây dự án của bạn nhanh hơn, gọn hơn.</h1>
+      <p>Một template tối giản, responsive, sẵn nút Dark Mode và các block cơ bản để khởi động dự án trên GitHub Pages.</p>
+      <div class="cta" id="bat-dau">
+        <a class="btn primary" href="#tinh-nang">Khám phá tính năng</a>
+        <a class="btn" href="README.md">Xem README</a>
+      </div>
+      <div class="card">
+        <code>git clone https://github.com/username/reponame.git && cd reponame</code>
+      </div>
+    </section>
+
+    <section id="tinh-nang" class="grid">
+      <div class="feature">
+        <h3>⚡ Nhanh & gọn</h3>
+        <p>Chỉ 1 file HTML – triển khai tức thì với GitHub Pages.</p>
+      </div>
+      <div class="feature">
+        <h3>🌓 Dark Mode</h3>
+        <p>Nút chuyển tối/sáng, tự lưu lựa chọn người dùng.</p>
+      </div>
+      <div class="feature">
+        <h3>📱 Responsive</h3>
+        <p>Hoạt động tốt trên điện thoại, tablet, desktop.</p>
+      </div>
+      <div class="feature">
+        <h3>🔎 SEO cơ bản</h3>
+        <p>Meta tags, Open Graph sẵn sàng chia sẻ mạng xã hội.</p>
+      </div>
+      <div class="feature">
+        <h3>🧩 Dễ tuỳ biến</h3>
+        <p>Thay màu, chữ, link trong vài giây (biến CSS).</p>
+      </div>
+      <div class="feature">
+        <h3>🚀 Sẵn mở rộng</h3>
+        <p>Thêm section mới mà không phá bố cục.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      © <span id="year"></span> • Tên Dự Án • Made with ❤
+    </div>
+  </footer>
+
+  <script>
+    // Năm hiện tại
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Dark mode toggle + lưu vào localStorage
+    const root = document.documentElement;
+    const MODE_KEY = 'preferred-mode';
+    const saved = localStorage.getItem(MODE_KEY);
+    if(saved === 'dark'){ document.body.classList.add('dark'); }
+
+    document.getElementById('mode').addEventListener('click', () => {
+      document.body.classList.toggle('dark');
+      const isDark = document.body.classList.contains('dark');
+      localStorage.setItem(MODE_KEY, isDark ? 'dark' : 'light');
+    });
+  </script>
+</body>
+</html>
